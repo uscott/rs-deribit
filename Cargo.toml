@@ -1,17 +1,16 @@
 [package]
-name = "deribit"
+name = "rs-deribit"
 version = "0.3.0"
-authors = ["Weiyüen Wu <doomsplayer@gmail.com>"]
-edition = "2018"
-description = "Rust client for deribit. Please look at tests/examples for detail usage at current stage."
+authors = ["Uriel Scott <uriel.scott@protonmail.com>"]
+edition = "2020"
+description = "Rust client for deribit."
 license = "MIT"
-documentation = "https://docs.rs/deribit"
-repository = "https://github.com/dovahcrow/deribit-rs"
+repository = "https://github.com/uscott/rs-deribit"
 readme = "README.md"
 categories = ["api-bindings"]
 
 [badges]
-travis-ci = { repository = "dovahcrow/deribit-rs", branch = "master" }
+travis-ci = { repository = "uscott/deribit-rs", branch = "master" }
 
 [dependencies]
 futures = { version = "0.3", features = ["async-await"] }
