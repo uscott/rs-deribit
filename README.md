@@ -1,30 +1,9 @@
 Deribit API V2 Client for Rust Language
 =================
 
-[![Build Status]][travis] [![Latest Version]][crates.io] [![Rustc Version nightly]][rustc] [![license]][license-content] [![keybase logo]][keybase] ![btc]
-
-[Build Status]: https://img.shields.io/travis/dovahcrow/deribit-rs.svg?style=flat-square
-[travis]: https://travis-ci.org/dovahcrow/deribit-rs
-
-[Latest Version]: https://img.shields.io/crates/v/deribit.svg?style=flat-square
-[crates.io]: https://crates.io/crates/deribit
-
-[Rustc Version nightly]: https://img.shields.io/badge/rustc-nightly-lightgray.svg?style=flat-square
-[rustc]: #
-
-[license]: https://img.shields.io/crates/l/deribit.svg?style=flat-square
-[license-content]: LICENSE
-
-[keybase logo]: https://img.shields.io/keybase/pgp/dovahcrow.svg?style=flat-square
-[keybase]: #
-
-[btc]: https://img.shields.io/keybase/btc/dovahcrow.svg?style=flat-square
+Forked from https://dovahcrow/deribit-rs
 
 Use this library for trading at your own risk.
-
-The current plan is to only implement the websocket communication, which includes call api through websocket 
-and websocket subscription. I will first implement these APIs used for my own trading purpose, however, if you want some APIs 
-to be prioritly implemented please open an issue or just throw me a PR (this is more welcome :P).
 
 # Basic usage
 
@@ -44,9 +23,9 @@ let (mut client, mut subscription) = drb.connect().await?;
 let req = deribit::models::TestRequest::default();
 
 // Calls to deribit server is made by giving "DeribitAPIClient::call" the request object.
-// The return type of "DeribitAPIClient::call" is "impl Future<Output=impl Future<Output=R>>", 
+// The return type of "DeribitAPIClient::call" is "impl Future<Output=impl Future<Output=R>>",
 // where the first layer future denotes the send process, and the second one denotes the receive process. This brings
-// fine grained control of the communication. The response type "R" depends on your request, with similar naming convention: 
+// fine grained control of the communication. The response type "R" depends on your request, with similar naming convention:
 // "TestRequest" will have "TestResponse".
 let _ = client.call(req).await?.await?;
 
@@ -106,7 +85,7 @@ while let Some(message) = subscription.next().await {
     - [ ] /private/set_announcement_as_read
     - [ ] /private/set_api_key_as_default
     - [ ] /private/set_email_for_subaccount
-    - [ ] /private/set_email_language 
+    - [ ] /private/set_email_language
     - [ ] /private/set_password_for_subaccount
     - [ ] /private/toggle_notifications_from_subaccount
     - [ ] /private/toggle_subaccount_login
@@ -195,9 +174,3 @@ while let Some(message) = subscription.next().await {
     - [x] user.portfolio.{currency}
     - [x] user.trades.{instrument_name}.{interval}
     - [x] user.trades.{kind}.{currency}.{interval}
-
-# Donate
-
-![donationqr](assets/donationqr.png)
-
-16PeVqncfWoQ94M4pxnitkYnnW8agQBBZB
