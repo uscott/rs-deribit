@@ -2,7 +2,7 @@
 name = "rs-deribit"
 version = "0.3.0"
 authors = ["Uriel Scott <uriel.scott@protonmail.com>"]
-edition = "2020"
+edition = "2018"
 description = "Rust client for deribit."
 license = "MIT"
 repository = "https://github.com/uscott/rs-deribit"
