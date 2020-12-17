@@ -3,6 +3,8 @@ Deribit API V2 Client for Rust Language
 
 Forked from https://dovahcrow/deribit-rs
 
+You can contribute in Bitcoin to the original author at the above Github page.
+
 Use this library for trading at your own risk.
 
 # Basic usage
