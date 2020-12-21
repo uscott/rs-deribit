@@ -1,13 +1,13 @@
 use dotenv::dotenv;
-use failure::Error;
-use fehler::throws;
-use futures::StreamExt;
 use ex_drbt::models::subscription::{PrivateSubscribeRequest, PublicSubscribeRequest};
 use ex_drbt::models::{
     AuthRequest, BuyRequest, CancelRequest, SellRequest, SubscriptionData, SubscriptionMessage,
     SubscriptionParams,
 };
 use ex_drbt::{Deribit, DeribitBuilder, DeribitError};
+use failure::Error;
+use fehler::throws;
+use futures::StreamExt;
 use std::env::var;
 use tokio::runtime::Runtime;
 use tokio::time::{delay_for, Duration};
@@ -456,7 +456,7 @@ fn user_orders() {
 
         delay_for(Duration::from_secs(1)).await;
 
-        let req = BuyRequest::limit("BTC-PERPETUAL", 100f64, 10f64);
+        let req = BuyRequest::limit("BTC-PERPETUAL", 24e3, 10f64);
 
         let resp = client.call(req).await?.await?;
         let id = resp.0.order.order_id;

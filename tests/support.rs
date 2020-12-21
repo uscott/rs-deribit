@@ -14,8 +14,8 @@ fn hello() {
         let (mut client, _) = drb.connect().await?;
 
         let req = HelloRequest {
-            client_name: "deribit-rs".into(),
-            client_version: "0.0.1".into(),
+            client_name: "ex-drbt".into(),
+            client_version: "0.1.0".into(),
         };
 
         let _ = client.call(req).await?.await?;
