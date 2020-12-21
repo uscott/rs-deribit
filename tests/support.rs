@@ -1,7 +1,7 @@
-use deribit::models::{GetTimeRequest, HelloRequest, TestRequest};
 use deribit::Deribit;
 use failure::Error;
 use fehler::throws;
+use rs_deribit::models::{GetTimeRequest, HelloRequest, TestRequest};
 use tokio::runtime::Runtime;
 
 #[test]

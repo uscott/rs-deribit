@@ -1,13 +1,13 @@
-use deribit::models::subscription::{PrivateSubscribeRequest, PublicSubscribeRequest};
-use deribit::models::{
-    AuthRequest, BuyRequest, CancelRequest, SellRequest, SubscriptionData, SubscriptionMessage,
-    SubscriptionParams,
-};
-use deribit::{Deribit, DeribitBuilder, DeribitError};
 use dotenv::dotenv;
 use failure::Error;
 use fehler::throws;
 use futures::StreamExt;
+use rs_deribit::models::subscription::{PrivateSubscribeRequest, PublicSubscribeRequest};
+use rs_deribit::models::{
+    AuthRequest, BuyRequest, CancelRequest, SellRequest, SubscriptionData, SubscriptionMessage,
+    SubscriptionParams,
+};
+use rs_deribit::{Deribit, DeribitBuilder, DeribitError};
 use std::env::var;
 use tokio::runtime::Runtime;
 use tokio::time::{delay_for, Duration};

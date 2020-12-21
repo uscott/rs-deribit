@@ -1,6 +1,6 @@
-use deribit::{models::HelloRequest, Deribit};
 use failure::Error;
 use fehler::throws;
+use rs_deribit::{models::HelloRequest, Deribit};
 use std::time::Duration;
 use tokio::runtime::Runtime;
 
