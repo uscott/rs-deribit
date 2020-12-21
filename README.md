@@ -1,9 +1,9 @@
 Deribit API V2 Client for Rust Language
 =================
 
-Forked from https://dovahcrow/deribit-rs
+Forked from https://github.com/dovahcrow/deribit-rs
 
-You can contribute in Bitcoin to the original author https://dovahcrow
+You can contribute in Bitcoin to the original author https://github.com/dovahcrow
 at the above Github link or here:
 
 # Donate
