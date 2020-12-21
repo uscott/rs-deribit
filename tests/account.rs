@@ -1,34 +1,25 @@
-use rs_deribit::models::{
-	AuthRequest,
-	Currency,
-	GetAccountSummaryRequest,
-	GetSubaccountsRequest,
-	Deribit,
-	DeribitBuilder
-};
 use dotenv::dotenv;
 use failure::Error;
 use fehler::throws;
+use rs_deribit::models::{
+    AuthRequest, Currency, Deribit, DeribitBuilder, GetAccountSummaryRequest, GetSubaccountsRequest,
+};
 use std::env::var;
 use tokio::runtime::Runtime;
 
-pub struct AccountTest
-{
-    key: 	String,
+pub struct AccountTest {
+    key: String,
     secret: String,
-    drb: 	Deribit,
-    rt: 	Runtime,
+    drb: Deribit,
+    rt: Runtime,
 }
 
-impl Default for AccountTest
-{
-	fn default() -> Self
-	{
+impl Default for AccountTest {
+    fn default() -> Self {
         let _ = dotenv();
         let _ = env_logger::try_init();
-		Self
-		{
-            key: var( "DERIBIT_KEY" ).unwrap(),
+        Self {
+            key: var("DERIBIT_KEY").unwrap(),
             secret: var("DERIBIT_SECRET").unwrap(),
             drb: DeribitBuilder::default().testnet(true).build().unwrap(),
             rt: Runtime::new().unwrap(),
@@ -38,17 +29,14 @@ impl Default for AccountTest
 
 #[test]
 #[throws(Error)]
-fn get_account_summary()
-{
-	let AccountTest
-	{
+fn get_account_summary() {
+    let AccountTest {
         mut rt,
         drb,
         key,
         secret,
     } = AccountTest::default();
-	let fut = async move
-	{
+    let fut = async move {
         let (mut client, _) = drb.connect().await?;
         let req = AuthRequest::credential_auth(&key, &secret);
         let _ = client.call(req).await?.await?;
