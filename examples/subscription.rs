@@ -1,4 +1,4 @@
-use deribit::models::{
+use rs_deribit::models::{
     HeartbeatType, PublicSubscribeRequest, SetHeartbeatRequest, SubscriptionParams, TestRequest,
 };
 use deribit::DeribitBuilder;
