@@ -2,12 +2,12 @@ use dotenv::dotenv;
 use failure::Error;
 use fehler::throws;
 use futures::StreamExt;
-use rs_deribit::models::subscription::{PrivateSubscribeRequest, PublicSubscribeRequest};
-use rs_deribit::models::{
+use ex_drbt::models::subscription::{PrivateSubscribeRequest, PublicSubscribeRequest};
+use ex_drbt::models::{
     AuthRequest, BuyRequest, CancelRequest, SellRequest, SubscriptionData, SubscriptionMessage,
     SubscriptionParams,
 };
-use rs_deribit::{Deribit, DeribitBuilder, DeribitError};
+use ex_drbt::{Deribit, DeribitBuilder, DeribitError};
 use std::env::var;
 use tokio::runtime::Runtime;
 use tokio::time::{delay_for, Duration};

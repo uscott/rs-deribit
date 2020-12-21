@@ -1,10 +1,10 @@
 use dotenv::dotenv;
 use failure::Error;
 use fehler::throws;
-use rs_deribit::models::{
+use ex_drbt::models::{
     Currency, GetBookSummaryByCurrencyRequest, GetIndexRequest, GetInstrumentsRequest,
 };
-use rs_deribit::DeribitBuilder;
+use ex_drbt::DeribitBuilder;
 use tokio::runtime::Runtime;
 
 #[test]

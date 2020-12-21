@@ -2,8 +2,8 @@ use dotenv::dotenv;
 use env_logger::init;
 use failure::Error;
 use futures::StreamExt;
-use rs_deribit::models::{AuthRequest, Currency, GetPositionsRequest, PrivateSubscribeRequest};
-use rs_deribit::DeribitBuilder;
+use ex_drbt::models::{AuthRequest, Currency, GetPositionsRequest, PrivateSubscribeRequest};
+use ex_drbt::DeribitBuilder;
 use std::env::var;
 
 #[tokio::main]

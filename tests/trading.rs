@@ -1,12 +1,12 @@
 use dotenv::dotenv;
-use failure::Error;
-use fehler::throws;
-use rs_deribit::models::{
+use ex_drbt::models::{
     AuthRequest, BuyRequest, CancelByLabelRequest, CancelRequest, Currency, EditRequest,
     GetOpenOrdersByCurrencyRequest, GetOpenOrdersByInstrumentRequest, GetOrderStateRequest,
     SellRequest,
 };
-use rs_deribit::DeribitBuilder;
+use ex_drbt::DeribitBuilder;
+use failure::Error;
+use fehler::throws;
 use std::env::var;
 use std::time::Duration;
 use tokio::runtime::Runtime;

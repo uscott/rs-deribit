@@ -1,28 +1,28 @@
 [package]
-name = "rs-deribit"
-version = "0.3.0"
+name = "ex-drbt"
+version = "0.1.0"
 authors = ["Uriel Scott <uriel.scott@protonmail.com>"]
 edition = "2018"
-description = "Rust client for deribit."
+description = "Rust client for deribit"
 license = "MIT"
 repository = "https://github.com/uscott/rs-deribit"
 readme = "README.md"
 categories = ["api-bindings"]
 
 [badges]
-travis-ci = { repository = "uscott/deribit-rs", branch = "master" }
+travis-ci = { repository = "uscott/rs-deribit", branch = "master" }
 
 [dependencies]
 futures = { version = "0.3", features = ["async-await"] }
-tokio = { version = "0.2", features = ["time", "macros"] }
+tokio = { version = "0.3.6", features = ["time", "macros"] }
 tungstenite = "0.11"
-tokio-tungstenite = { version = "0.11", features = ["tls"]}
+tokio-tungstenite = { version = "0.12.0", features = ["tls"]}
 url = "2"
 serde = { version = "1.0", features = ["derive"] }
-serde_json = "1"
+serde_json = "1.0.60"
 log = "0.4"
 derive_builder = "0.9"
-pin-project = "0.4"
+pin-project = "1.0.2"
 shrinkwraprs = "0.3"
 regex = "1"
 lazy_static = "1"
@@ -33,5 +33,5 @@ failure = "0.1"
 # anyhow = "1"
 
 [dev-dependencies]
-env_logger = "0.7"
+env_logger = "0.8.2"
 dotenv = "0.15"

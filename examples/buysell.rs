@@ -1,8 +1,8 @@
 use dotenv::dotenv;
 use failure::Error;
 use fehler::throws;
-use rs_deribit::models::{AuthRequest, BuyRequest, SellRequest};
-use rs_deribit::DeribitBuilder;
+use ex_drbt::models::{AuthRequest, BuyRequest, SellRequest};
+use ex_drbt::DeribitBuilder;
 use std::env::var;
 
 #[throws(Error)]

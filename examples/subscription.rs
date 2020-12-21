@@ -3,10 +3,10 @@ use env_logger::init;
 use failure::Error;
 use fehler::throws;
 use futures::StreamExt;
-use rs_deribit::models::{
+use ex_drbt::models::{
     HeartbeatType, PublicSubscribeRequest, SetHeartbeatRequest, SubscriptionParams, TestRequest,
 };
-use rs_deribit::DeribitBuilder;
+use ex_drbt::DeribitBuilder;
 
 #[throws(Error)]
 #[tokio::main]

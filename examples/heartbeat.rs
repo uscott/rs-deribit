@@ -2,8 +2,8 @@ use dotenv::dotenv;
 use env_logger::init;
 use failure::Error;
 use futures::StreamExt;
-use rs_deribit::models::{HeartbeatType, SetHeartbeatRequest, SubscriptionParams, TestRequest};
-use rs_deribit::DeribitBuilder;
+use ex_drbt::models::{HeartbeatType, SetHeartbeatRequest, SubscriptionParams, TestRequest};
+use ex_drbt::DeribitBuilder;
 
 #[tokio::main]
 async fn main() -> Result<(), Error> {
