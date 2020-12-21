@@ -10,8 +10,8 @@ use tokio::runtime::Runtime;
 #[throws(Error)]
 fn get_transfers() {
     let _ = dotenv();
-    let key = var("DERIBIT_KEY").unwrap();
-    let secret = var("DERIBIT_SECRET").unwrap();
+    let key = var("DERIBIT_TEST_MAIN_KEY").unwrap();
+    let secret = var("DERIBIT_TEST_MAIN_SECRET").unwrap();
 
     let drb = DeribitBuilder::default().testnet(true).build().unwrap();
     let mut rt = Runtime::new().expect("cannot create tokio runtime");

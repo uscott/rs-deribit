@@ -16,8 +16,8 @@ use tokio::time::delay_for;
 #[throws(Error)]
 fn get_order_state() {
     let _ = dotenv();
-    let key = var("DERIBIT_KEY").unwrap();
-    let secret = var("DERIBIT_SECRET").unwrap();
+    let key = var("DERIBIT_TEST_MAIN_KEY").unwrap();
+    let secret = var("DERIBIT_TEST_MAIN_SECRET").unwrap();
 
     let drb = DeribitBuilder::default().testnet(true).build().unwrap();
     let mut rt = Runtime::new().expect("cannot create tokio runtime");
@@ -38,8 +38,8 @@ fn get_order_state() {
 fn buy_and_sell() {
     let _ = dotenv();
 
-    let key = var("DERIBIT_KEY").unwrap();
-    let secret = var("DERIBIT_SECRET").unwrap();
+    let key = var("DERIBIT_TEST_MAIN_KEY").unwrap();
+    let secret = var("DERIBIT_TEST_MAIN_SECRET").unwrap();
     let drb = DeribitBuilder::default().testnet(true).build().unwrap();
     let mut rt = Runtime::new().expect("cannot create tokio runtime");
 
@@ -68,8 +68,8 @@ fn buy_and_sell() {
 fn buy_and_edit_and_inspect_and_cancel() {
     let _ = dotenv();
 
-    let key = var("DERIBIT_KEY").unwrap();
-    let secret = var("DERIBIT_SECRET").unwrap();
+    let key = var("DERIBIT_TEST_MAIN_KEY").unwrap();
+    let secret = var("DERIBIT_TEST_MAIN_SECRET").unwrap();
     let drb = DeribitBuilder::default().testnet(true).build().unwrap();
     let mut rt = Runtime::new().expect("cannot create tokio runtime");
 
@@ -111,8 +111,8 @@ fn buy_and_edit_and_inspect_and_cancel() {
 fn buy_and_cancel_by_label() {
     let _ = dotenv();
 
-    let key = var("DERIBIT_KEY").unwrap();
-    let secret = var("DERIBIT_SECRET").unwrap();
+    let key = var("DERIBIT_TEST_MAIN_KEY").unwrap();
+    let secret = var("DERIBIT_TEST_MAIN_SECRET").unwrap();
     let drb = DeribitBuilder::default().testnet(true).build().unwrap();
     let mut rt = Runtime::new().expect("cannot create tokio runtime");
 

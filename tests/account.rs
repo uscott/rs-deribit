@@ -18,8 +18,8 @@ impl Default for AccountTest {
         let _ = dotenv();
         let _ = env_logger::try_init();
         Self {
-            key: var("DERIBIT_KEY").unwrap(),
-            secret: var("DERIBIT_SECRET").unwrap(),
+            key: var("DERIBIT_TEST_MAIN_KEY").unwrap(),
+            secret: var("DERIBIT_TEST_MAIN_SECRET").unwrap(),
             drb: DeribitBuilder::default().testnet(true).build().unwrap(),
             rt: Runtime::new().unwrap(),
         }
