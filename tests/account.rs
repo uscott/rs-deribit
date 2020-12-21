@@ -1,9 +1,8 @@
 use dotenv::dotenv;
 use failure::Error;
 use fehler::throws;
-use rs_deribit::models::{
-    AuthRequest, Currency, Deribit, DeribitBuilder, GetAccountSummaryRequest, GetSubaccountsRequest,
-};
+use rs_deribit::models::{AuthRequest, Currency, GetAccountSummaryRequest, GetSubaccountsRequest};
+use rs_deribit::{Deribit, DeribitBuilder};
 use std::env::var;
 use tokio::runtime::Runtime;
 
